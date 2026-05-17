@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Python Virtual Environment
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+.env.local
+
+# OS generated files
+.DS_Store
+Thumbs.db
