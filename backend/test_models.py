@@ -3,8 +3,13 @@ import requests
 import json
 import sys
 
-# Prefer reading the key from an environment variable for safety
-api_key = os.environ.get("GOOGLE_API_KEY") or "AIzaSyAUNzM_vJRwWS8Cw9LBWlOMkNGOuCd138Q"
+# Require the key from an environment variable for safety
+api_key = os.environ.get("GOOGLE_API_KEY")
+if not api_key:
+	print("ERROR: GOOGLE_API_KEY is not set. Create a key in Google Cloud Console and set the env var.")
+	print("PowerShell: $env:GOOGLE_API_KEY = \"YOUR_KEY\"")
+	print("Windows persistent: setx GOOGLE_API_KEY \"YOUR_KEY\"")
+	sys.exit(1)
 
 def _mask_key(k: str) -> str:
 	if not k:
