@@ -4,7 +4,7 @@ import json
 import sys
 
 # Prefer reading the key from an environment variable for safety
-api_key = os.environ.get("GOOGLE_API_KEY") or "AIzaSyDBVsyJKnthtaqE2cKS2zM_xvJQYBp8Zu0"
+api_key = os.environ.get("GOOGLE_API_KEY") or "AIzaSyAUNzM_vJRwWS8Cw9LBWlOMkNGOuCd138Q"
 
 def _mask_key(k: str) -> str:
 	if not k:
